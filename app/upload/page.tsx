@@ -7,7 +7,7 @@ interface UploadWidget {
   public_id: String;
 }
 
-function uploadPage() {
+function UploadPage() {
   const [result, setResult] = useState("")
 
   return (
@@ -34,4 +34,4 @@ function uploadPage() {
   )
 }
 
-export default uploadPage
+export default UploadPage
