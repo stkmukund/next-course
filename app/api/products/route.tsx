@@ -21,12 +21,12 @@ export async function POST(request: NextRequest) {
     //         error : `User ${body.email} already exists`
     //     });
 
-    const newProduct = await prisma.product.create({
-        data: {
-            name: body.name,
-            price: body.price
-        }
-    })
+    // const newProduct = await prisma.product.create({
+    //     data: {
+    //         name: body.name,
+    //         price: body.price
+    //     }
+    // })
 
-    return NextResponse.json(newProduct, { status: 201 })
+    return NextResponse.json({message: "Not in service"})
 }

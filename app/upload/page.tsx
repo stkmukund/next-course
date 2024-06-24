@@ -18,10 +18,10 @@ function UploadPage() {
         src={result}
         alt="Uploaded image"
       />}
-      <CldUploadWidget uploadPreset="vvsylyle" onUpload={(result, options) => {
+      <CldUploadWidget uploadPreset="vvsylyle" onSuccess={(result, options) => {
         if (result.event !== "success") return;
         const resultImage = result.info as UploadWidget
-        setResult(resultImage.public_id);
+        setResult(resultImage.public_id as 'string');
       }} >
         {({ open }) => {
           return (

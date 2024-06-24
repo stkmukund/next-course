@@ -7,7 +7,7 @@ export async function GET(request: NextRequest,
     { params }: { params: { id: string } }) {
     const users = await prisma.user.findUnique({
         where: {
-            id: parseInt(params.id)
+            id: params.id
         }
      })
     if (!users)

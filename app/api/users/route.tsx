@@ -54,11 +54,11 @@ export async function DELETE(request: NextRequest){
             error : `User ${body.email} not exists`
         });
 
-    const newUser = await prisma.user.delete({
-        where : {
-            email : user.email
-        }
-    })
+    // const newUser = await prisma.user.delete({
+    //     where : {
+    //         email : user.email
+    //     }
+    // })
 
-    return NextResponse.json(newUser)
+    return NextResponse.json({newUser : "not in service"})
 }
