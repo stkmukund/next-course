@@ -9,10 +9,10 @@ const NavBar = () => {
     <div className="navbar bg-sky-100">
   <div className="navbar-start">
     <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+      <div tabIndex={0} role="button" className="btn btn-circle">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
       </div>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black">
         <li><a>Homepage</a></li>
         <li><a>Portfolio</a></li>
         <li><a>About</a></li>
@@ -20,11 +20,11 @@ const NavBar = () => {
     </div>
   </div>
   <div className="navbar-center">
-    <Link href={'/'} className="btn btn-ghost text-xl">Home</Link>
-    { status === "loading" && <div className="btn btn-ghost text-xl">Loading...</div> }
-    { status === "unauthenticated" && <Link href='/api/auth/signin' className="btn btn-ghost text-xl">Login</Link>}
-    { status === "authenticated" && <div className="btn btn-ghost text-xl">{session.user!.name}</div> }
-    { status === "authenticated" && <Link className="btn btn-ghost text-xl"  href={'/api/auth/signout'}>Sign Out</Link> }
+    <Link href={'/'} className="btn text-xl">Home</Link>
+    { status === "loading" && <div className="btn text-xl">Loading...</div> }
+    { status === "unauthenticated" && <Link href='/api/auth/signin' className="btn text-xl">Login</Link>}
+    { status === "authenticated" && <div className="btn text-xl">{session.user!.name}</div> }
+    { status === "authenticated" && <Link className="btntext-xl"  href={'/api/auth/signout'}>Sign Out</Link> }
   </div>
   <div className="navbar-end">
     <button className="btn btn-ghost btn-circle">
